@@ -5,8 +5,8 @@ import patternDesktop from "@/public/pattern-bg-desktop.png";
 import arrowBtn from "@/public/icon-arrow.svg";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { useEffect, useState } from "react";
-import Markerposition from "../markerPosition/page";
+import { useState } from "react";
+import Markerposition from "../markerposition/page";
 
 interface ApiResponse {
   ip: string;
