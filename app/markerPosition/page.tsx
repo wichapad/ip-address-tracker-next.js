@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
