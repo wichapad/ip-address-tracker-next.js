@@ -8,33 +8,33 @@ interface LocationData {
   longitude: number;
 }
 interface MarkerProps {
-  data: LocationData;
+  data: LocationData | null;
 }
 
-const PostionMarker = ({ data }:MarkerProps) => {
-    const position: [number, number] = useMemo(() => {
-        return [data.latitude, data.longitude];
-      }, [data.latitude, data.longitude]);
-      const map = useMap();
-    
-      useEffect(() => {
-        map.flyTo(position, 13, {
-          animate: true,
-        });
-      }, [map, position]);
-      return (
-        <Marker
-          icon={L.icon({
-            iconUrl: "/icon-location.svg",
-            iconSize: [32, 40],
-            iconAnchor: [10, 41],
-            popupAnchor: [2, -40],
-          })}
-          position={position}
-        >
-          <Popup>This is the location of the IP address or Domain</Popup>
-        </Marker>
-      );
-}
+const PostionMarker = ({ data }: MarkerProps) => {
+  const position: [number, number] = useMemo(() => {
+    return [data.latitude, data.longitude];
+  }, [data.latitude, data.longitude]);
+  const map = useMap();
 
-export default PostionMarker
+  useEffect(() => {
+    map.flyTo(position, 13, {
+      animate: true,
+    });
+  }, [map, position]);
+  return (
+    <Marker
+      icon={L.icon({
+        iconUrl: "/icon-location.svg",
+        iconSize: [32, 40],
+        iconAnchor: [10, 41],
+        popupAnchor: [2, -40],
+      })}
+      position={position}
+    >
+      <Popup>This is the location of the IP address or Domain</Popup>
+    </Marker>
+  );
+};
+
+export default PostionMarker;
