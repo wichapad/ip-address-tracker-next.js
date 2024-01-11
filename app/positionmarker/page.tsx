@@ -10,7 +10,7 @@ interface LocationData {
 interface MarkerProps {
   data: LocationData;
 }
-export default function Markerposition({ data }: MarkerProps) {
+export default function Postionmarker({ data }: MarkerProps) {
   const position: [number, number] = useMemo(() => {
     return [data.latitude, data.longitude];
   }, [data.latitude, data.longitude]);

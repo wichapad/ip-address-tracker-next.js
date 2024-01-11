@@ -6,7 +6,7 @@ import arrowBtn from "@/public/icon-arrow.svg";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { useState } from "react";
-import MarkerPosition from '../markerposition/page'
+import PostionMarker from '../positionmarker/page'
 
 interface ApiResponse {
   ip: string;
@@ -118,7 +118,7 @@ const Map = () => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <MarkerPosition data={data} />
+            <PostionMarker data={data} />
           </MapContainer>
         </div>
       )}
