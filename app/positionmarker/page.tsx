@@ -1,13 +1,12 @@
-"use client";
 import { useEffect, useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 
-interface MarkerProps {
+export interface MarkerProps {
   data: LocationData;
 }
 
-interface LocationData {
+export interface LocationData {
   latitude: number;
   longitude: number;
 }
