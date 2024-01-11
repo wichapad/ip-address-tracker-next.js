@@ -8,7 +8,7 @@ interface LocationData {
   longitude: number;
 }
 interface MarkerProps {
-  data: LocationData | null;
+  data: LocationData;
 }
 
 const PostionMarker = ({ data }: MarkerProps) => {
