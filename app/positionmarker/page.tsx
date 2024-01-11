@@ -3,12 +3,13 @@ import { useEffect, useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 
+interface MarkerProps {
+  data: LocationData;
+}
+
 interface LocationData {
   latitude: number;
   longitude: number;
-}
-interface MarkerProps {
-  data: LocationData;
 }
 
 const PostionMarker = ({ data }: MarkerProps) => {
