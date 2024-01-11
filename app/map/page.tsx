@@ -8,7 +8,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import { useState } from "react";
 import PostionMarker from '../positionmarker/page'
 
-interface ApiResponse {
+export interface ApiResponse {
   ip: string;
   city: string;
   country_name: string;
