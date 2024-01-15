@@ -1,19 +1,10 @@
 "use client";
 import { useEffect as useEffectClient } from "react";
-import {  useMemo } from "react";
+import { useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 
-export interface MarkerProps {
-  data: LocationData;
-}
-
-export interface LocationData {
-  latitude: number;
-  longitude: number;
-}
-
-const PostionMarker = ({ data }: MarkerProps) => {
+const PostionMarker = ({ data }) => {
   const position: [number, number] = useMemo(() => {
     return [data.latitude, data.longitude];
   }, [data.latitude, data.longitude]);
