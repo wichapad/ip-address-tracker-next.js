@@ -1,6 +1,6 @@
 "use client";
 import { useEffect as useEffectClient } from "react";
-import { useEffect, useMemo } from "react";
+import {  useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 
