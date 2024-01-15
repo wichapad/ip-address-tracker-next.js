@@ -1,4 +1,3 @@
-"use client";
 import { useEffect as useEffectClient } from "react";
 import { useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
@@ -24,6 +23,7 @@ const PostionMarker = ({ data }: MarkerProps) => {
       animate: true,
     });
   }, [map, position]);
+
   return (
     <Marker
       icon={L.icon({
@@ -37,6 +37,6 @@ const PostionMarker = ({ data }: MarkerProps) => {
       <Popup>This is the location of the IP address or Domain</Popup>
     </Marker>
   );
-};
+}
 
 export default PostionMarker;
