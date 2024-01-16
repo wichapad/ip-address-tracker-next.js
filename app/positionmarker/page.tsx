@@ -12,7 +12,7 @@ export interface LocationData {
   longitude: number;
 }
 
-const PositionMarker = ({ data }: MarkerProps) => {
+const PositionMarker = ({data}:MarkerProps) => {
   const position: [number, number] = useMemo(() => {
     return [data.latitude, data.longitude];
   }, [data.latitude, data.longitude]);
@@ -38,5 +38,6 @@ const PositionMarker = ({ data }: MarkerProps) => {
     </Marker>
   );
 };
+}
 
-export default PositionMarker;
+export default PositionMarker
