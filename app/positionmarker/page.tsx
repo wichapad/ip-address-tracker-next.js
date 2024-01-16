@@ -38,6 +38,6 @@ const PositionMarker = ({data}:MarkerProps) => {
     </Marker>
   );
 };
-}
+
 
 export default PositionMarker
