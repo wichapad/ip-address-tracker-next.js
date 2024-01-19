@@ -28,6 +28,7 @@ height: 30vh;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  padding-top: 2rem;
 }
 
 .inputSearch {

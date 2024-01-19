@@ -4,9 +4,25 @@ import patternMobile from "@/public/pattern-bg-mobile.png";
 import patternDesktop from "@/public/pattern-bg-desktop.png";
 import arrowBtn from "@/public/icon-arrow.svg";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer } from "react-leaflet";
+import dynamic from "next/dynamic";
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((mod) => mod.MapContainer),
+  {
+    ssr: false,
+  }
+);
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((mod) => mod.TileLayer),
+  {
+    ssr: false,
+  }
+);
 import { useState } from "react";
 import PositionMarker from "./positionmarker";
+
+if (typeof window !== "undefined") {
+  require("leaflet/dist/leaflet.css");
+}
 
 type ApiResponse = {
   ip: string;
