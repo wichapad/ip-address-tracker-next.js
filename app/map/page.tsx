@@ -6,9 +6,9 @@ import arrowBtn from "@/public/icon-arrow.svg";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { useState } from "react";
-import PositionMarker from "../positionmarker/page";
+import PositionMarker from "../map/positionmarker";
 
-export interface ApiResponse {
+type ApiResponse = {
   ip: string;
   city: string;
   country_name: string;
@@ -18,9 +18,9 @@ export interface ApiResponse {
   time_zone: {
     current_time: string;
   };
-}
+};
 
-const Map = () => {
+export default function Map() {
   const [ipInput, setIpInput] = useState("");
   const [data, setData] = useState<ApiResponse | null>(null);
 
@@ -124,5 +124,4 @@ const Map = () => {
       )}
     </div>
   );
-};
-export default Map;
+}

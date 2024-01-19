@@ -3,19 +3,20 @@ import { useEffect, useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 
-export interface MarkerProps {
+type MarkerProps = {
   data: LocationData;
-}
+};
 
-export interface LocationData {
+type LocationData = {
   latitude: number;
   longitude: number;
-}
+};
 
-const PositionMarker = ({data}:MarkerProps) => {
+export default function PositionMarker({ data }: MarkerProps) {
   const position: [number, number] = useMemo(() => {
     return [data.latitude, data.longitude];
   }, [data.latitude, data.longitude]);
+
   const map = useMap();
 
   useEffect(() => {
@@ -37,7 +38,4 @@ const PositionMarker = ({data}:MarkerProps) => {
       <Popup>This is the location of the IP address or Domain</Popup>
     </Marker>
   );
-};
-
-
-export default PositionMarker
+}

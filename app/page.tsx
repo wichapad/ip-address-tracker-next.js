@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
-const page = () => {
+export default function page() {
   const Map = useMemo(
     () =>
       dynamic(() => import("@/app/map/page"), {
@@ -16,6 +16,4 @@ const page = () => {
       <Map />
     </div>
   );
-};
-
-export default page;
+}
