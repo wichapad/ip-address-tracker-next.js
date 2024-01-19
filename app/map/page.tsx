@@ -6,7 +6,7 @@ import arrowBtn from "@/public/icon-arrow.svg";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import { useState } from "react";
-import PositionMarker from "../map/positionmarker";
+import PositionMarker from "./positionmarker";
 
 type ApiResponse = {
   ip: string;
