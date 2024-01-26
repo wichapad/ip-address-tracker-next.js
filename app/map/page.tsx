@@ -6,6 +6,7 @@ import arrowBtn from "@/public/icon-arrow.svg";
 
 import "leaflet/dist/leaflet.css";
 import dynamic from "next/dynamic";
+
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
   {

@@ -20,10 +20,12 @@ export default function PositionMarker({ data }: MarkerProps) {
   const map = useMap();
 
   useEffect(() => {
-    map.flyTo(position, 13, {
-      animate: true,
-    });
-  }, []);
+    if (typeof window !== "undefined") {
+      map.flyTo(position, 13, {
+        animate: true,
+      });
+    }
+  }, [map, position]);
 
   return (
     <Marker
