@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo } from "react";
 import { Marker, Popup, useMap } from "react-leaflet";
-import L from "leaflet";
+// import L from "leaflet";
 
 type MarkerProps = {
   data: LocationData;
@@ -29,12 +29,12 @@ export default function PositionMarker({ data }: MarkerProps) {
 
   return (
     <Marker
-      icon={L.icon({
-        iconUrl: "/icon-location.svg",
-        iconSize: [32, 40],
-        iconAnchor: [10, 41],
-        popupAnchor: [2, -40],
-      })}
+      // icon={L.icon({
+      //   iconUrl: "/icon-location.svg",
+      //   iconSize: [32, 40],
+      //   iconAnchor: [10, 41],
+      //   popupAnchor: [2, -40],
+      // })}
       position={position}
     >
       <Popup>This is the location of the IP address or Domain</Popup>
