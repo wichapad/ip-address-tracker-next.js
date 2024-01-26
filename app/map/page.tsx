@@ -3,6 +3,7 @@ import Image from "next/image";
 import patternMobile from "@/public/pattern-bg-mobile.png";
 import patternDesktop from "@/public/pattern-bg-desktop.png";
 import arrowBtn from "@/public/icon-arrow.svg";
+
 import "leaflet/dist/leaflet.css";
 import dynamic from "next/dynamic";
 const MapContainer = dynamic(
@@ -17,12 +18,9 @@ const TileLayer = dynamic(
     ssr: false,
   }
 );
+
 import { useState } from "react";
 import PositionMarker from "./positionmarker";
-
-if (typeof window !== "undefined") {
-  require("leaflet/dist/leaflet.css");
-}
 
 type ApiResponse = {
   ip: string;
