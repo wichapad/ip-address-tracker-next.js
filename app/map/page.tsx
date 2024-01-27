@@ -19,9 +19,11 @@ const TileLayer = dynamic(
     ssr: false,
   }
 );
+const PositionMarker = dynamic(() => import("./positionmarker"), {
+  ssr: false,
+});
 
 import { useState } from "react";
-import PositionMarker from "./positionmarker";
 
 type ApiResponse = {
   ip: string;
